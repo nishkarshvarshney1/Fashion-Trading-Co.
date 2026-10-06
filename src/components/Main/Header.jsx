@@ -3,7 +3,7 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <div className='sticky top-0 z-1000 grid grid-cols-[1fr_auto_1fr] mx-10 text-[0.8125rem] items-center py-4 bg-(--white) backdrop-blur-3xl font-extralight tracking-wide border-b border-(--white-gray)'>
+    <div className='sticky top-0 z-1000 grid grid-cols-[1fr_auto_1fr] px-10 text-[0.8125rem] items-center py-4 bg-(--white)/70 backdrop-blur-xl font-extralight backdrop-saturate-150 tracking-wide border-b border-black/10'>
         <h1 className='text-2xl'>FASHION TRADING CO.</h1>
         <div className='justify-self-center flex gap-6'>
             <h3 className='flex gap-1.5 items-center'>
