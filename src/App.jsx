@@ -1,0 +1,27 @@
+import React from 'react'
+import Header from './components/Main/Header';
+import Hero from './components/Main/Hero';
+import Collection from './components/Main/Collection/Collection';
+import Lowers from './components/Main/Lowers/Lowers';
+import TShirt from './components/Main/T-Shirts/TShirt';
+import NewArrivals from './components/Main/NewArrivals/NewArrivals';
+import Brands from './components/Main/Brands/Brands';
+import Footer from './components/Main/Footer/Footer';
+
+const App = () => {
+  return (
+    <div className='h-fit bg-(--white)'>
+      <Header />
+      <Hero />
+      <Collection />
+      <Hero />
+      <Lowers />
+      <TShirt />
+      <NewArrivals />
+      <Brands />
+      <Footer />
+    </div>
+  )
+}
+
+export default App

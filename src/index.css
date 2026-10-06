@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: NHaas;
+  src: url(./assets/NHaasGroteskTXPro-55Rg.woff2);
+}
+
+@font-face {
+  font-family: NHaas-bold;
+  src: url(./assets/NHaasGroteskTXPro-65Md.woff2);
+}
+
+:root {
+  font-family: NHaas;
+  --white: #EFEFEF;
+  --white-b: #EBEBEB;
+  --white-gray: #DBDBDB;
+  --yellow: #FEF552;
+}
+
+html,
+body {
+  background-color: var(--white);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

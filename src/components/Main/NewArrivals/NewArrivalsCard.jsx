@@ -1,0 +1,13 @@
+import React from 'react'
+
+const NewArrivalsCard = () => {
+  return (
+    <div className='w-1/3 bg-(--white-b) border border-(--white-gray) rounded-sm h-142 relative'>
+      <button className='px-3 py-1 border border-black bg-white hover:bg-black hover:text-white text-xs rounded-sm absolute left-4 bottom-4 cursor-pointer transiton'>
+        OAKLEY
+      </button>
+    </div>
+  )
+}
+
+export default NewArrivalsCard
