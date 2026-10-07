@@ -2,7 +2,7 @@ import React from 'react'
 
 const CollectionCard = () => {
   return (
-    <div className='flex justify-between bg-(--white-b) border-2 rounded-sm border-(--white-gray) h-98 w-56 flex-col text-sm uppercase p-4 shrink-0'>
+    <div className='flex justify-between bg-(--white-b) border-2 rounded-sm border-(--white-gray) lg:h-98 lg:w-56 h-68 w-40 flex-col text-xs lg:text-sm uppercase p-4 shrink-0'>
       <div className='h-[60%]'></div>
       <div className='flex gap-2 items-center'>
         <div className='w-2.5 h-2.5 bg-(--white) border border-black rounded-full'></div>

@@ -3,7 +3,7 @@ import React from 'react'
 
 const Header = ({setIsMenuOpened}) => {
   return (
-    <div className='sticky top-0 z-1000 lg:grid flex justify-between grid-cols-[1fr_auto_1fr] px-4 md:px-10 text-[0.8125rem] items-center py-4 bg-(--white)/70 backdrop-blur-xl font-extralight backdrop-saturate-150 tracking-wide border-b border-black/10'>
+    <div className='sticky top-0 z-1000 lg:grid flex justify-between grid-cols-[1fr_auto_1fr] px-4 lg:px-10 text-[0.8125rem] items-center py-4 bg-(--white)/70 backdrop-blur-xl font-extralight backdrop-saturate-150 tracking-wide border-b border-black/10'>
         <h1 className='lg:text-2xl text-lg'>FASHION TRADING CO.</h1>
         <div className='justify-self-center gap-6 lg:flex hidden'>
             <h3 className='gap-1.5 items-center xl:flex hidden'>
