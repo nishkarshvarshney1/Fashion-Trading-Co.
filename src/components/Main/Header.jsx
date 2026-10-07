@@ -16,7 +16,7 @@ const Header = () => {
             <h3>BOYS</h3>
             <h3>OUR STORE</h3>
         </div>
-        <div className='justify-self-end flex gap-6'>
+        <div className='justify-self-end flex gap-6 '>
             <button className='flex items-center gap-2'>
                 <Search size={16} />
                  SEARCH
