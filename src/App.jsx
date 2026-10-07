@@ -13,20 +13,16 @@ const App = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false)
   return (
     <div className='h-fit bg-(--white)'>
-      {isMenuOpened
-        ? <Menu setIsMenuOpened={setIsMenuOpened} />
-        : <>
-          <Header setIsMenuOpened={setIsMenuOpened} />
-          <Hero />
-          <Collection />
-          <Hero />
-          <Lowers />
-          <TShirt />
-          <NewArrivals />
-          <Brands />
-          <Footer />
-        </>}
-
+      <Header setIsMenuOpened={setIsMenuOpened} />
+      <Hero />
+      <Collection />
+      <Hero />
+      <Lowers />
+      <TShirt />
+      <NewArrivals />
+      <Brands />
+      <Footer />
+      {isMenuOpened && <Menu setIsMenuOpened={setIsMenuOpened}/>}
     </div>
   )
 }

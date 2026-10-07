@@ -6,7 +6,7 @@ import RightLeft from '../RightLeft';
 const Collection = () => {
   const {rowRef, scrollLeft, scrollRight} = useRowScroll()
   return (
-    <div className='pl-2 lg:pl-10 my-9 flex flex-col gap-4'>
+    <div className='pl-3 lg:pl-10 my-9 flex flex-col gap-4'>
       <h2 className='flex items-center gap-3 text-sm'>
         <div className='w-3 h-3 rounded-full border border-black bg-lime-200 '></div>
         THE COLLECTION
