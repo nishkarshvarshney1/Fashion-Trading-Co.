@@ -1,4 +1,3 @@
-import React, { useRef } from 'react'
 import LowersCard from './LowersCard';
 import RightLeft from '../RightLeft';
 import useRowScroll from '../../../hooks/useRowScroll'
@@ -24,7 +23,7 @@ const Lowers = () => {
         <LowersCard />
         <LowersCard />
       </div>
-      <RightLeft onRight={scrollRight} onLeft={scrollLeft}/>
+      <RightLeft onRight={scrollRight} onLeft={scrollLeft} pageButtonLabel='SHOW ALL'/>
     </div>
   )
 }

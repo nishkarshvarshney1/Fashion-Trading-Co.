@@ -22,7 +22,7 @@ const TShirt = () => {
         <TShirtCard />
         <TShirtCard />
       </div>
-      <RightLeft onLeft={scrollLeft} onRight={scrollRight}/>
+      <RightLeft onLeft={scrollLeft} onRight={scrollRight} pageButtonLabel='SHOW ALL'/>
     </div>
   )
 }
