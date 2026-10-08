@@ -1,29 +1,23 @@
 import React, { useState } from 'react'
-import Header from './components/Main/Header';
-import Hero from './components/Main/Hero';
-import Collection from './components/Main/Collection/Collection';
-import Lowers from './components/Main/Lowers/Lowers';
-import TShirt from './components/Main/T-Shirts/TShirt';
-import NewArrivals from './components/Main/NewArrivals/NewArrivals';
-import Brands from './components/Main/Brands/Brands';
 import Footer from './components/Main/Footer/Footer';
-import Menu from './components/Main/Menu'
+import Header from './components/Main/Header';
+import Menu from './components/Main/Menu';
+import Home from './pages/Home';
+import { Route, Routes } from 'react-router-dom';
+import LowersPage from './pages/LowersPage';
 
 const App = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false)
   return (
-    <div className='h-fit bg-(--white)'>
+    <>
       <Header setIsMenuOpened={setIsMenuOpened} />
-      <Hero />
-      <Collection />
-      <Hero />
-      <Lowers />
-      <TShirt />
-      <NewArrivals />
-      <Brands />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/lowers' element={<LowersPage />} />
+      </Routes>
       <Footer />
-      {isMenuOpened && <Menu setIsMenuOpened={setIsMenuOpened} isMenuOpened={isMenuOpened}/>}
-    </div>
+      {isMenuOpened && <Menu setIsMenuOpened={setIsMenuOpened} isMenuOpened={isMenuOpened} />}
+    </>
   )
 }
 
