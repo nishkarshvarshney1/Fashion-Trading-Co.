@@ -22,7 +22,7 @@ const App = () => {
       <NewArrivals />
       <Brands />
       <Footer />
-      {isMenuOpened && <Menu setIsMenuOpened={setIsMenuOpened}/>}
+      {isMenuOpened && <Menu setIsMenuOpened={setIsMenuOpened} isMenuOpened={isMenuOpened}/>}
     </div>
   )
 }

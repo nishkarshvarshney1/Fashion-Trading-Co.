@@ -3,7 +3,7 @@ import React from 'react'
 
 const Menu = ({setIsMenuOpened}) => {
     return (
-        <div className='fixed inset-0 z-2000 bg-(--white) text-[0.8125rem] p-4 flex flex-col gap-8 tracking-wide lg:hidden'>
+        <div className='fixed inset-0 z-2000 bg-(--white) text-[0.8125rem] p-4 flex flex-col gap-8 tracking-wide lg:hidden smooth-left'>
             <div className='flex justify-between'>
                 <h2 className='text-lg'>FASHION TRADING CO.</h2>
                 <button onClick={()=>{
