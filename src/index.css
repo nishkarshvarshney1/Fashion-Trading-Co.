@@ -42,3 +42,9 @@ body {
 .smooth-left {
   animation: animation-left 0.3s ease-out;
 }
+
+/* @media (pointer: fine) {
+  * {
+    cursor: none;
+  }
+} */
