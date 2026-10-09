@@ -5,6 +5,7 @@ import Menu from './components/Main/Menu';
 import Home from './pages/Home';
 import { Route, Routes } from 'react-router-dom';
 import LowersPage from './pages/LowersPage';
+import ProductPages from './components/ProductPages/ProductPages';
 
 const App = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false)
@@ -13,10 +14,13 @@ const App = () => {
       <Header setIsMenuOpened={setIsMenuOpened} />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/lowers' element={<LowersPage />} />
+        <Route path='/new-arrivals' element={<ProductPages />} />
+        <Route path='/t-shirts' element={<ProductPages />} />
+        <Route path='/lowers' element={<ProductPages />} />
+        <Route path='/boys' element={<ProductPages />} />
       </Routes>
       <Footer />
-      {isMenuOpened && <Menu setIsMenuOpened={setIsMenuOpened} isMenuOpened={isMenuOpened} />}
+      {isMenuOpened && <Menu setIsMenuOpened={setIsMenuOpened} isMenuOpened={isMenuOpened}/>}
     </>
   )
 }
