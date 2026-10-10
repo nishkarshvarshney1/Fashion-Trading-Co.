@@ -1,4 +1,4 @@
-const productPagesData = {
+export const productPagesData = {
   boys: {
     title: 'BOYS',
     productCount: 603,

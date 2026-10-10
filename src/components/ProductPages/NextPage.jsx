@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-const NextPage = () => {
+const NextPage = (props) => {
     const buttonCSS = 'hover:bg-white cursor-pointer px-2 py-0.5 rounded-xs'
   return (
     <>
@@ -17,7 +17,7 @@ const NextPage = () => {
     </div>
     <div className='flex text-xs px-10 gap-4 mb-15'>
         <Link to='/' className='text-(--gray) flex gap-1.5'> HOME <span>/</span></Link>
-        <span>BOYS</span>
+        <span>{props.title}</span>
     </div>
     </>
   )
