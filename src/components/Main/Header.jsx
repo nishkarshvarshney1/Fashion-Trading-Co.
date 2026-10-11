@@ -63,13 +63,13 @@ const Header = ({ setIsMenuOpened }) => {
                     </div>
                 )}
                 {searchMenu && (
-                    <div className='px-10'>
+                    <div className='px-10 h-[50vh] border-b absolute bg-(--white) w-full'>
                         <div className='flex justify-between text-(length:--ls) border-b items-center relative'>
                             <input type="text" className='flex-1 focus:outline-0 py-5 px-7 uppercase' />
                             <Search className='absolute left-2 top-1/2 -translate-1/2' size={20} strokeWidth={2}/>
                             <div className='px-3 py-1 border border-black bg-white rounded-sm hover:bg-black hover:text-white cursor-pointer'>TO RESEARCH</div>
                         </div>
-                        <div className='flex gap-2 mt-4 mb-10'>
+                        <div className='flex gap-2 mt-6 mb-15'>
                             <h3 className={boxCSS}>DISTANCE X NIKE</h3>
                             <h3 className={boxCSS}>STIFF</h3>
                             <h3 className={boxCSS}>NORDA</h3>
@@ -77,10 +77,20 @@ const Header = ({ setIsMenuOpened }) => {
                             <h3 className={boxCSS}>STIFF</h3>
                             <h3 className={boxCSS}>NORDA</h3>
                         </div>
+                        <div className='flex gap-2'>
+                            <div className='h-50 w-80 bg-(--white-b) border border-(--white-gray) py-3.5 px-5 text-lg'>
+                                <h2>DISTANCE X NIKE</h2>
+                            </div>
+                            <div className='h-50 w-44 bg-(--white-b) border border-(--white-gray) rounded-sm'></div>
+                            <div className='h-50 w-44 bg-(--white-b) border border-(--white-gray) rounded-sm'></div>
+                            <div className='h-50 w-44 bg-(--white-b) border border-(--white-gray) rounded-sm'></div>
+                            <div className='h-50 w-44 bg-(--white-b) border border-(--white-gray) rounded-sm'></div>
+                            <div className='h-50 w-44 bg-(--white-b) border border-(--white-gray) rounded-sm'></div>
+                        </div>
                     </div>
                 )}
             </div>
-            {expandMenu && (
+            {expandMenu || searchMenu && (
                 <div className='fixed pointer-events-none inset-0 bg-black/20 z-999'>
                 </div>
             )}
