@@ -2,7 +2,7 @@ import { Search } from 'lucide-react';
 import React from 'react'
 import { NavLink, Link } from 'react-router-dom';
 
-const Menu = ({ setIsMenuOpened }) => {
+const Menu = ({ setIsMenuOpened, setSearchMenu }) => {
     const closeMenu = () => setIsMenuOpened(false)
     return (
         <div className='fixed inset-0 z-2000 bg-(--white) text-[0.8125rem] p-4 flex flex-col gap-8 tracking-wide lg:hidden smooth-left'>
@@ -26,7 +26,11 @@ const Menu = ({ setIsMenuOpened }) => {
                 <NavLink onClick={closeMenu} to='/our-store'>OUR STORE</NavLink>
             </nav>
             <div className='flex gap-3 flex-col border-t border-(--white-gray) pt-5 justify-start'>
-                <button className='flex items-center gap-2'>
+                <button onClick={()=> {
+                    setSearchMenu(true)
+                    closeMenu()
+                }}
+                 className='flex items-center gap-2'>
                     <Search size={16} />
                     <span>SEARCH</span>
                 </button>

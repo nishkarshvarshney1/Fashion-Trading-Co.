@@ -9,16 +9,17 @@ import BrandPages from './pages/BrandPages';
 
 const App = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false)
+  const [searchMenu, setSearchMenu] = useState(false)
   return (
     <>
-      <Header setIsMenuOpened={setIsMenuOpened} />
+      <Header setIsMenuOpened={setIsMenuOpened} searchMenu={searchMenu} setSearchMenu={setSearchMenu}/>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/:category' element={<ProductPages />} />
         <Route path='/brands' element={<BrandPages />} />
       </Routes>
       <Footer />
-      {isMenuOpened && <Menu setIsMenuOpened={setIsMenuOpened} isMenuOpened={isMenuOpened}/>}
+      {isMenuOpened && <Menu setIsMenuOpened={setIsMenuOpened} setSearchMenu={setSearchMenu}/>}
     </>
   )
 }

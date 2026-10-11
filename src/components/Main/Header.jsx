@@ -2,16 +2,15 @@ import { Menu, Search } from 'lucide-react';
 import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom';
 
-const Header = ({ setIsMenuOpened }) => {
+const Header = ({ setIsMenuOpened, setSearchMenu, searchMenu }) => {
     const [expandMenu, setExpandMenu] = useState(false)
-    const [searchMenu, setSearchMenu] = useState(false)
     const boxCSS = 'bg-(--white-b) border border-(--white-gray) px-3 py-0.75 tracking-wide hover:bg-white cursor-pointer text-(length:--ls) rounded-sm'
     return (
         <>
             <div onMouseLeave={() => setExpandMenu(false)} className='sticky top-0 z-1000'>
-                <div className=' lg:grid flex justify-between grid-cols-[1fr_auto_1fr] px-4 lg:px-10 text-[0.8125rem] items-center py-4 bg-(--white) backdrop-blur-xl font-extralight backdrop-saturate-150 tracking-wide border-b border-black/10'>
+                <div className=' lg:grid flex justify-between grid-cols-[1fr_auto_1fr] px-4 lg:px-10 text-[0.8125rem] items-center h-17.5 bg-(--white) backdrop-blur-xl font-extralight backdrop-saturate-150 tracking-wide border-b border-black/10'>
                     <Link to='/'> <h1 onMouseEnter={() => setExpandMenu(false)} className='lg:text-2xl text-lg'>FASHION TRADING CO.</h1> </Link>
-                    <nav className='justify-self-center gap-6 lg:flex hidden cursor-pointer'>
+                    <nav className='justify-self-center gap-6 lg:flex hidden cursor-pointer h-full items-center'>
                         <NavLink onClick={() => setExpandMenu(false)} onMouseEnter={() => setExpandMenu(true)} to='/new-arrivals' className='gap-1.5 items-center xl:flex hidden hover:font-extrabold'>
                             <div className='w-3 h-3 rounded-full border border-black bg-blue-400'></div>
                             NEW ARRIVALS
@@ -32,13 +31,13 @@ const Header = ({ setIsMenuOpened }) => {
                             setExpandMenu(true)
                             setSearchMenu(false)
                         }} to='/boys' className='hover:font-extrabold'>BOYS</NavLink>
-                        <NavLink onMouseEnter={() => setExpandMenu(false)} to='/our-store' className='xl:block hidden hover:font-extrabold'>OUR STORE</NavLink>
+                        <NavLink onMouseEnter={() => setExpandMenu(false)} to='/our-store' className='xl:flex hidden hover:font-extrabold h-full items-center'>OUR STORE</NavLink>
                     </nav>
                     <nav className='justify-self-end lg:flex hidden gap-6 '>
                         <button onClick={() => setSearchMenu(!searchMenu)}
-                            className='flex items-center gap-2'>
+                            className='flex items-center gap-2 hover:font-extrabold cursor-pointer'>
                             <Search size={16} />
-                            <span className='xl:inline hidden hover:font-extrabold cursor-pointer'>SEARCH</span>
+                            <span className='xl:inline hidden '>SEARCH</span>
                         </button>
                         <button className='hover:font-extrabold'>ACCOUNT</button>
                         <NavLink to='/contact' className='hover:font-extrabold'>CONTACT</NavLink>
