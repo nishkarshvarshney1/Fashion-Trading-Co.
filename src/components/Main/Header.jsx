@@ -4,10 +4,12 @@ import { Link, NavLink } from 'react-router-dom';
 
 const Header = ({ setIsMenuOpened }) => {
     const [expandMenu, setExpandMenu] = useState(false)
+    const [searchMenu, setSearchMenu] = useState(false)
+    const boxCSS = 'bg-(--white-b) border border-(--white-gray) px-3 py-0.75 tracking-wide hover:bg-white cursor-pointer text-(length:--ls) rounded-sm'
     return (
-        <div>
+        <>
             <div onMouseLeave={() => setExpandMenu(false)} className='sticky top-0 z-1000'>
-                <div className=' lg:grid flex justify-between grid-cols-[1fr_auto_1fr] px-4 lg:px-10 text-[0.8125rem] items-center py-4 bg-(--white)/70 backdrop-blur-xl font-extralight backdrop-saturate-150 tracking-wide border-b border-black/10'>
+                <div className=' lg:grid flex justify-between grid-cols-[1fr_auto_1fr] px-4 lg:px-10 text-[0.8125rem] items-center py-4 bg-(--white) backdrop-blur-xl font-extralight backdrop-saturate-150 tracking-wide border-b border-black/10'>
                     <Link to='/'> <h1 onMouseEnter={() => setExpandMenu(false)} className='lg:text-2xl text-lg'>FASHION TRADING CO.</h1> </Link>
                     <nav className='justify-self-center gap-6 lg:flex hidden cursor-pointer'>
                         <NavLink onClick={() => setExpandMenu(false)} onMouseEnter={() => setExpandMenu(true)} to='/new-arrivals' className='gap-1.5 items-center xl:flex hidden hover:font-extrabold'>
@@ -21,7 +23,8 @@ const Header = ({ setIsMenuOpened }) => {
                         <NavLink onMouseEnter={() => setExpandMenu(false)} to='/our-store' className='xl:block hidden hover:font-extrabold'>OUR STORE</NavLink>
                     </nav>
                     <nav className='justify-self-end lg:flex hidden gap-6 '>
-                        <button className='flex items-center gap-2'>
+                        <button onClick={() => setSearchMenu(true)}
+                            className='flex items-center gap-2'>
                             <Search size={16} />
                             <span className='xl:inline hidden hover:font-extrabold'>SEARCH</span>
                         </button>
@@ -37,6 +40,7 @@ const Header = ({ setIsMenuOpened }) => {
                         <Menu />
                     </button>
                 </div>
+
                 {expandMenu && (
                     <div className='grid grid-cols-4 gap-2  h-[50vh] absolute w-full px-10 bg-(--white) text-(length:--ls) border-b'>
                         <div className='border-t pt-6 text-xl flex flex-col gap-2 font-bold'>
@@ -58,8 +62,29 @@ const Header = ({ setIsMenuOpened }) => {
                         </div>
                     </div>
                 )}
+                {searchMenu && (
+                    <div className='px-10'>
+                        <div className='flex justify-between text-(length:--ls) border-b items-center relative'>
+                            <input type="text" className='flex-1 focus:outline-0 py-5 px-7 uppercase' />
+                            <Search className='absolute left-2 top-1/2 -translate-1/2' size={20} strokeWidth={2}/>
+                            <div className='px-3 py-1 border border-black bg-white rounded-sm hover:bg-black hover:text-white cursor-pointer'>TO RESEARCH</div>
+                        </div>
+                        <div className='flex gap-2 mt-4 mb-10'>
+                            <h3 className={boxCSS}>DISTANCE X NIKE</h3>
+                            <h3 className={boxCSS}>STIFF</h3>
+                            <h3 className={boxCSS}>NORDA</h3>
+                            <h3 className={boxCSS}>DISTANCE X NIKE</h3>
+                            <h3 className={boxCSS}>STIFF</h3>
+                            <h3 className={boxCSS}>NORDA</h3>
+                        </div>
+                    </div>
+                )}
             </div>
-        </div>
+            {expandMenu && (
+                <div className='fixed pointer-events-none inset-0 bg-black/20 z-999'>
+                </div>
+            )}
+        </>
     )
 }
 
