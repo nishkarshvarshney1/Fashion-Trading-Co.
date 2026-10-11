@@ -16,17 +16,29 @@ const Header = ({ setIsMenuOpened }) => {
                             <div className='w-3 h-3 rounded-full border border-black bg-blue-400'></div>
                             NEW ARRIVALS
                         </NavLink>
-                        <NavLink onClick={() => setExpandMenu(false)} onMouseEnter={() => setExpandMenu(true)} to='/brands' className='hover:font-extrabold'>BRANDS</NavLink>
-                        <NavLink onClick={() => setExpandMenu(false)} onMouseEnter={() => setExpandMenu(true)} to='/t-shirts' className='hover:font-extrabold'>T-SHIRTS</NavLink>
-                        <NavLink onClick={() => setExpandMenu(false)} onMouseEnter={() => setExpandMenu(true)} to='/lowers' className='hover:font-extrabold'> LOWERS </NavLink>
-                        <NavLink onClick={() => setExpandMenu(false)} onMouseEnter={() => setExpandMenu(true)} to='/boys' className='hover:font-extrabold'>BOYS</NavLink>
+                        <NavLink onClick={() => setExpandMenu(false)} onMouseEnter={() => {
+                            setExpandMenu(true)
+                            setSearchMenu(false)
+                        }} to='/brands' className='hover:font-extrabold'>BRANDS</NavLink>
+                        <NavLink onClick={() => setExpandMenu(false)} onMouseEnter={() => {
+                            setExpandMenu(true)
+                            setSearchMenu(false)
+                        }} to='/t-shirts' className='hover:font-extrabold'>T-SHIRTS</NavLink>
+                        <NavLink onClick={() => setExpandMenu(false)} onMouseEnter={() => {
+                            setExpandMenu(true)
+                            setSearchMenu(false)
+                        }} to='/lowers' className='hover:font-extrabold'> LOWERS </NavLink>
+                        <NavLink onClick={() => setExpandMenu(false)} onMouseEnter={() => {
+                            setExpandMenu(true)
+                            setSearchMenu(false)
+                        }} to='/boys' className='hover:font-extrabold'>BOYS</NavLink>
                         <NavLink onMouseEnter={() => setExpandMenu(false)} to='/our-store' className='xl:block hidden hover:font-extrabold'>OUR STORE</NavLink>
                     </nav>
                     <nav className='justify-self-end lg:flex hidden gap-6 '>
-                        <button onClick={() => setSearchMenu(true)}
+                        <button onClick={() => setSearchMenu(!searchMenu)}
                             className='flex items-center gap-2'>
                             <Search size={16} />
-                            <span className='xl:inline hidden hover:font-extrabold'>SEARCH</span>
+                            <span className='xl:inline hidden hover:font-extrabold cursor-pointer'>SEARCH</span>
                         </button>
                         <button className='hover:font-extrabold'>ACCOUNT</button>
                         <NavLink to='/contact' className='hover:font-extrabold'>CONTACT</NavLink>
@@ -66,10 +78,10 @@ const Header = ({ setIsMenuOpened }) => {
                     <div className='px-10 h-[50vh] border-b absolute bg-(--white) w-full'>
                         <div className='flex justify-between text-(length:--ls) border-b items-center relative'>
                             <input type="text" className='flex-1 focus:outline-0 py-5 px-7 uppercase' />
-                            <Search className='absolute left-2 top-1/2 -translate-1/2' size={20} strokeWidth={2}/>
+                            <Search className='absolute left-2 top-1/2 -translate-1/2' size={20} strokeWidth={2} />
                             <div className='px-3 py-1 border border-black bg-white rounded-sm hover:bg-black hover:text-white cursor-pointer'>TO RESEARCH</div>
                         </div>
-                        <div className='flex gap-2 mt-6 mb-15'>
+                        <div className='flex gap-2 mt-6 mb-13'>
                             <h3 className={boxCSS}>DISTANCE X NIKE</h3>
                             <h3 className={boxCSS}>STIFF</h3>
                             <h3 className={boxCSS}>NORDA</h3>
@@ -90,8 +102,9 @@ const Header = ({ setIsMenuOpened }) => {
                     </div>
                 )}
             </div>
-            {expandMenu || searchMenu && (
-                <div className='fixed pointer-events-none inset-0 bg-black/20 z-999'>
+            {(expandMenu || searchMenu) && (
+                <div onClick={() => setSearchMenu(false)}
+                    className='fixed inset-0 bg-black/20 z-999'>
                 </div>
             )}
         </>
