@@ -34,7 +34,6 @@ const Menu = ({ setIsMenuOpened, setSearchMenu }) => {
                     <Search size={16} />
                     <span>SEARCH</span>
                 </button>
-                <button>ACCOUNT</button>
                 <NavLink onClick={closeMenu} to='/contact'>CONTACT</NavLink>
             </div>
         </div>

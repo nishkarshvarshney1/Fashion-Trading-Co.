@@ -39,7 +39,6 @@ const Header = ({ setIsMenuOpened, setSearchMenu, searchMenu }) => {
                             <Search size={16} />
                             <span className='xl:inline hidden '>SEARCH</span>
                         </button>
-                        <button className='hover:font-extrabold'>ACCOUNT</button>
                         <NavLink onClick={() => setSearchMenu(false)}
                             to='/contact' className='hover:font-extrabold'>CONTACT</NavLink>
                     </nav>
