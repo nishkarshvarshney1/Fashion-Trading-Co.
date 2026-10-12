@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import { Route, Routes } from 'react-router-dom';
 import ProductPages from './components/ProductPages/ProductPages';
 import BrandPages from './pages/BrandPages';
+import ContactPage from './pages/ContactPage';
 
 const App = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false)
@@ -17,6 +18,7 @@ const App = () => {
         <Route path='/' element={<Home />} />
         <Route path='/:category' element={<ProductPages />} />
         <Route path='/brands' element={<BrandPages />} />
+        <Route path='/contact' element={<ContactPage />} />
       </Routes>
       <Footer />
       {isMenuOpened && <Menu setIsMenuOpened={setIsMenuOpened} setSearchMenu={setSearchMenu}/>}

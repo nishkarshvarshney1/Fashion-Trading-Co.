@@ -76,7 +76,7 @@ const Header = ({ setIsMenuOpened, setSearchMenu, searchMenu }) => {
                 {searchMenu && (
                     <div className='px-10 h-[50vh] border-b absolute bg-(--white) w-full'>
                         <div className='flex justify-between text-(length:--ls) border-b items-center relative'>
-                            <input type="text" className='flex-1 focus:outline-0 py-5 px-7 uppercase' autoFocus={searchMenu}/>
+                            <input type="text" className='flex-1 focus:outline-0 py-5 px-7 uppercase' autoFocus={setSearchMenu}/>
                             <Search className='absolute left-2 top-1/2 -translate-1/2' size={20} strokeWidth={2} />
                             <div className='px-3 py-1 border border-black bg-white rounded-sm hover:bg-black hover:text-white cursor-pointer'>TO RESEARCH</div>
                         </div>
