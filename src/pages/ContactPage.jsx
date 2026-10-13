@@ -31,7 +31,7 @@ const ContactPage = () => {
                     <Mail className='mb-2'/>
                     <h3 className='text-lg'>Email us</h3>
                     <h4 className='text-(length:--ls) text-(--gray)'>WE'LL GET BACK TO YOU WITHIN 24 HOURS.</h4>
-                    <MoveRight className='absolute right-5 top-1/2 -translate-1/2' />
+                    <MoveRight className='absolute right-5 top-1/2 -translate-1/2 smooth-right' />
                 </div>
             </div>
             <div className='grid grid-cols-3 gap-5'>
