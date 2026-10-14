@@ -5,8 +5,8 @@ import Menu from './components/Main/Menu';
 import Home from './pages/Home';
 import { Route, Routes } from 'react-router-dom';
 import ProductPages from './components/ProductPages/ProductPages';
-import BrandPages from './pages/BrandPages';
 import ContactPage from './pages/ContactPage';
+import BrandPage from './pages/BrandPage';
 
 const App = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false)
@@ -17,7 +17,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/:category' element={<ProductPages />} />
-        <Route path='/brands' element={<BrandPages />} />
+        <Route path='/brands' element={<BrandPage />} />
         <Route path='/contact' element={<ContactPage />} />
       </Routes>
       <Footer />
