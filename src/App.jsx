@@ -7,6 +7,7 @@ import { Route, Routes } from 'react-router-dom';
 import ProductPages from './components/ProductPages/ProductPages';
 import ContactPage from './pages/ContactPage';
 import BrandPage from './pages/BrandPage';
+import ScrollToTop from './hooks/ScrollToTop';
 
 const App = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false)
@@ -14,6 +15,7 @@ const App = () => {
   return (
     <>
       <Header setIsMenuOpened={setIsMenuOpened} searchMenu={searchMenu} setSearchMenu={setSearchMenu}/>
+      <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/:category' element={<ProductPages />} />

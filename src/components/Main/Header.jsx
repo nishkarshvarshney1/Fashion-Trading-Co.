@@ -1,6 +1,6 @@
 import { Menu, Search } from 'lucide-react';
 import React, { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 
 const Header = ({ setIsMenuOpened, setSearchMenu, searchMenu }) => {
     const [expandMenu, setExpandMenu] = useState(false)
