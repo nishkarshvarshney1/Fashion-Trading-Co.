@@ -11,9 +11,9 @@ const ProductPages = () => {
     if (!data) return <div>Page not found</div>
     return (
         <div>
-            <ProductHeading title={data.title} count={data.productCount}/>
-            <ProductCards items={data.products}/>
-            <NextPage title={data.title}/>
+            <ProductHeading title={data.title} count={data.productCount} />
+            <ProductCards items={data.products} />
+            <NextPage title={data.title} />
         </div>
     )
 }

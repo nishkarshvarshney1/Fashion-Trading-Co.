@@ -7,7 +7,7 @@ import { Route, Routes } from 'react-router-dom';
 import ProductPages from './components/ProductPages/ProductPages';
 import ContactPage from './pages/ContactPage';
 import BrandPage from './pages/BrandPage';
-import ScrollToTop from './hooks/ScrollToTop';
+import ScrollToTop from './components/ScrollToTop';
 
 const App = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false)
