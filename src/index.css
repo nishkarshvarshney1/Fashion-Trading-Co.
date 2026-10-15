@@ -46,22 +46,6 @@ body {
   animation: animation-left 0.3s ease-out;
 }
 
-@keyframes animation-right {
-  from {
-    transform: translateX(-100%);
-    backdrop-filter: blur(20px);
-    background: transparent;
-  }
-
-  to {
-    transform: translateX(0);
-  }
-}
-
-.smooth-right {
-  animation: animation-right 0.8s ease-out;
-}
-
 /* @media (pointer: fine) {
   * {
     cursor: none;
