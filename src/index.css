@@ -30,22 +30,6 @@ body {
   display: none;
 }
 
-@keyframes animation-left {
-  from {
-    transform: translateX(100%);
-    backdrop-filter: blur(20px);
-    background: transparent;
-  }
-
-  to {
-    transform: translateX(0);
-  }
-}
-
-.smooth-left {
-  animation: animation-left 0.3s ease-out;
-}
-
 /* @media (pointer: fine) {
   * {
     cursor: none;

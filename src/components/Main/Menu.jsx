@@ -1,15 +1,33 @@
+import { useGSAP } from '@gsap/react';
+import { gsap } from 'gsap';
 import { Search } from 'lucide-react';
-import React from 'react'
+import React, { useRef } from 'react'
 import { NavLink, Link } from 'react-router-dom';
 
 const Menu = ({ setIsMenuOpened, setSearchMenu }) => {
     const closeMenu = () => setIsMenuOpened(false)
+    const smallMenu = useRef(null)
+    useGSAP(()=>{
+        const tl = gsap.timeline()
+        tl.from(smallMenu.current, {
+        x: '100%',
+        duration: 0.5,
+        ease: 'power2.out'
+    })
+        tl.from('a, button', {
+            x: 40,
+            opacity: 0,
+            stagger: 0.08
+
+        }, '<')
+    }, {scope: smallMenu})
     return (
-        <div className='fixed inset-0 z-2000 bg-(--white) text-[0.8125rem] p-4 flex flex-col gap-8 tracking-wide lg:hidden smooth-left'>
+        <div ref={smallMenu} className='fixed inset-0 z-2000 bg-(--white) text-[0.8125rem] p-4 flex flex-col gap-8 tracking-wide lg:hidden'>
             <div className='flex justify-between'>
                 <h2 className='text-lg'><Link to='/'>FASHION TRADING CO. </Link></h2>
                 <button onClick={() => {
                     setIsMenuOpened(false)
+                    tl.reverse()
                 }}
                     className='cursor-pointer text-sm'
                 >CLOSE</button>
