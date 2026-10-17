@@ -24,10 +24,9 @@ const Menu = ({ setIsMenuOpened, setSearchMenu }) => {
     return (
         <div ref={smallMenu} className='fixed inset-0 z-2000 bg-(--white) text-[0.8125rem] p-4 flex flex-col gap-8 tracking-wide lg:hidden'>
             <div className='flex justify-between'>
-                <h2 className='text-lg'><Link to='/'>FASHION TRADING CO. </Link></h2>
+                <Link onClick={closeMenu} to='/'><h2 className='text-lg'>FASHION TRADING CO.</h2></Link>
                 <button onClick={() => {
                     setIsMenuOpened(false)
-                    tl.reverse()
                 }}
                     className='cursor-pointer text-sm'
                 >CLOSE</button>
