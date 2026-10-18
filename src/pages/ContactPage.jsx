@@ -4,6 +4,7 @@ import { ArrowRight, Clock, Mail, MapPin, MoveRight, Phone } from 'lucide-react'
 import { useRef } from 'react';
 
 const ContactPage = () => {
+    const contactRef = useRef()
     const hoverAnimation = (e) => {
         const rect = e.currentTarget.getBoundingClientRect()
         const x = e.clientX - rect.left
@@ -61,9 +62,9 @@ const ContactPage = () => {
             ease: 'back.out',
             duration: 0.6
         }, '-=0.5')
-    })
+    }, { scope: contactRef })
     return (
-        <div className='flex flex-col gap-5 bg-(--white) uppercase px-10 mt-10 mb-13'>
+        <div ref={contactRef} className='flex flex-col gap-5 bg-(--white) uppercase px-10 mt-10 mb-13'>
             <div className='flex flex-col items-center gap-2 mb-2  text-center'>
                 <h4 className='js-upward-animation1 text-(length:--ls) text-(--gray) overflow-hidden'>{'contact us'.split('').map((e, idx) => <span key={idx} className='inline-block'>{e}</span>)}</h4>
                 <h1 className='js-upward-animation2 text-5xl overflow-hidden'>{'Get in touch'.split('').map((e, idx) => <span key={idx} className='inline-block'>{e}</span>)}</h1>

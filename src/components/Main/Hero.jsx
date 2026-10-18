@@ -6,14 +6,14 @@ const Hero = () => {
   const heroRef = useRef()
   useGSAP(()=>{
     gsap.from('.box1', {
-      x: -100,
+      x: -30,
       duration: 1
     })
     gsap.from('.box2', {
-      x: 100,
+      x: 30,
       duration: 1
     })
-  }, {scope: heroRef})
+  }, {scope: heroRef, dependencies: []})
   return (
     <div ref={heroRef} className='lg:h-[74vh] flex lg:flex-row flex-col gap-2 lg:px-10 px-3'>
       <div className='box1 w-full lg:h-full lg:w-[68%] h-[60vh] bg-amber-900'></div>
