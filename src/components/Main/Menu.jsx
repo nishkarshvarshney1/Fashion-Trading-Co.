@@ -40,7 +40,6 @@ const Menu = ({ setIsMenuOpened, setSearchMenu }) => {
                 <NavLink onClick={closeMenu} to='/t-shirts'>T-SHIRTS</NavLink>
                 <NavLink onClick={closeMenu} to='/lowers'>LOWERS</NavLink>
                 <NavLink onClick={closeMenu} to='/boys'>BOYS</NavLink>
-                <NavLink onClick={closeMenu} to='/our-store'>OUR STORE</NavLink>
             </nav>
             <div className='flex gap-3 flex-col border-t border-(--white-gray) pt-5 justify-start'>
                 <button onClick={()=> {

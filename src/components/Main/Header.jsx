@@ -45,7 +45,6 @@ const Header = ({ setIsMenuOpened, setSearchMenu, searchMenu }) => {
                             setExpandMenu(true)
                             setSearchMenu(false)
                         }} to='/boys' className='js-nav hover:font-extrabold'>BOYS</NavLink>
-                        <NavLink onMouseEnter={() => setExpandMenu(false)} onClick={() => setSearchMenu(false)} to='/our-store' className='js-nav xl:flex hidden hover:font-extrabold h-full items-center'>OUR STORE</NavLink>
                     </nav>
                     <nav className='justify-self-end lg:flex hidden gap-6 '>
                         <button onClick={() => setSearchMenu(!searchMenu)}

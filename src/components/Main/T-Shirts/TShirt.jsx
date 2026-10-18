@@ -17,7 +17,6 @@ const TShirt = () => {
       opacity: 0,
       scrollTrigger: {
         trigger: rowRef.current,
-        markers: true,
         start: 'top 80%'
       }
     })
