@@ -66,9 +66,9 @@ const ContactPage = () => {
     return (
         <div ref={contactRef} className='flex flex-col gap-5 bg-(--white) uppercase px-10 mt-10 mb-13'>
             <div className='flex flex-col items-center gap-2 mb-2  text-center'>
-                <h4 className='js-upward-animation1 text-(length:--ls) text-(--gray) overflow-hidden'>{'contact us'.split('').map((e, idx) => <span key={idx} className='inline-block'>{e}</span>)}</h4>
-                <h1 className='js-upward-animation2 text-5xl overflow-hidden'>{'Get in touch'.split('').map((e, idx) => <span key={idx} className='inline-block'>{e}</span>)}</h1>
-                <h4 className='js-upward-animation3 text-(length:--ls) text-(--gray) w-110 overflow-hidden'>{"HAVE A QUESTION, NEED HELP, OR INTERESTED IN WHOLESALE? WE'RE HERE TO HELP.".split('').map((e, idx) => <span key={idx} className='inline-block'>{e}</span>)}
+                <h4 className='js-upward-animation1 text-(length:--ls) text-(--gray) overflow-hidden'>{'contact us'.split('').map((e, idx) => <span key={idx} className='inline-block'>{e === ' ' ? '\u00A0' : e}</span>)}</h4>
+                <h1 className='js-upward-animation2 text-5xl overflow-hidden'>{'Get in touch'.split('').map((e, idx) => <span key={idx} className='inline-block'>{e === ' ' ? '\u00A0' : e}</span>)}</h1>
+                <h4 className='js-upward-animation3 text-(length:--ls) text-(--gray) w-110 overflow-hidden'>{"HAVE A QUESTION, NEED HELP, OR INTERESTED IN WHOLESALE? WE'RE HERE TO HELP.".split('').map((e, idx) => <span key={idx} className='inline-block'>{e === ' ' ? '\u00A0' : e}</span>)}
                 </h4>
             </div>
             <div className='grid grid-cols-2 gap-5'>
