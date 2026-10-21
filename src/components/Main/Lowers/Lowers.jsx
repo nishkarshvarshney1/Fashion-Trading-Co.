@@ -16,7 +16,7 @@ const Lowers = () => {
       opacity: 0,
       scrollTrigger: {
         trigger: rowRef.current,
-        start: 'top 80%'
+        start: 'top 80%',
       }
     })
   })
